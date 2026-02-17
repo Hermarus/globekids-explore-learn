@@ -1,5 +1,5 @@
 import { Play, Users, Award, Star, ArrowRight, Sparkles } from "lucide-react";
-import heroImage from "@/assets/hero-children.jpg";
+import heroImage from "@/assets/hero-dubai.jpg";
 
 const HeroSection = () => {
   const scrollToApply = () => {
