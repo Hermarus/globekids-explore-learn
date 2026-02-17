@@ -1,16 +1,11 @@
 
 
-# Add Nature Background Image to Hero Section
+# Remove Description Text from Benefits Section
 
 ## What changes
-Replace the pale CSS gradient background with a real nature photo (bg-forest.jpg from existing assets) as the hero section background, with a semi-transparent overlay to keep text readable.
+Remove the paragraph text "8 лет мы создаём лучшие условия для развития детей, совмещая эффективное обучение с незабываемым отдыхом" from the Benefits section header in `src/components/BenefitsSection.tsx`.
 
-## Technical changes in `src/components/HeroSection.tsx`
+## Technical details
+- Delete the `<p>` element containing this text (around line 80-83 in the section header area)
+- Keep the "Почему мы" label and the main heading intact
 
-1. **Import background image**: Add `import bgForest from "@/assets/bg-forest.jpg"`
-2. **Set as background**: Apply the forest image as a `backgroundImage` via inline style with `background-size: cover` and `background-position: center`
-3. **Add dark/light overlay**: Place an absolute overlay div with a semi-transparent white or gradient (e.g., `bg-white/70` or a gradient from white/80 to white/50) so text remains readable
-4. **Remove old gradient**: Delete the current `linear-gradient` inline style
-5. **Keep decorative blurs**: Optionally keep or remove the blurred circles -- they add depth even on top of the photo
-
-Result: A beautiful nature photo visible behind the hero content, with enough overlay to maintain text contrast and readability.
