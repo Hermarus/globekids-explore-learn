@@ -1,5 +1,6 @@
 import { Play, Users, Award, Star, ArrowRight, Sparkles } from "lucide-react";
 import heroImage from "@/assets/hero-dubai.jpg";
+import bgForest from "@/assets/bg-forest.jpg";
 
 const HeroSection = () => {
   const scrollToApply = () => {
@@ -10,14 +11,18 @@ const HeroSection = () => {
   return (
     <section className="relative pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden"
       style={{
-        background: `linear-gradient(160deg, hsl(173 35% 88%) 0%, hsl(80 20% 90%) 30%, hsl(40 25% 92%) 60%, hsl(173 30% 85%) 100%)`
+        backgroundImage: `url(${bgForest})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
       }}
     >
-      {/* Large decorative blurred shapes for depth */}
+      {/* Semi-transparent overlay for text readability */}
+      <div className="absolute inset-0 bg-white/60 backdrop-blur-[2px]" />
+
+      {/* Decorative blurred shapes for depth */}
       <div className="absolute -top-20 -left-32 w-[500px] h-[500px] rounded-full blur-3xl" style={{ background: 'hsl(173 58% 39% / 0.15)' }} />
       <div className="absolute -bottom-20 -right-20 w-[600px] h-[600px] rounded-full blur-3xl" style={{ background: 'hsl(80 25% 45% / 0.12)' }} />
       <div className="absolute top-1/3 left-1/2 w-[400px] h-[400px] rounded-full blur-3xl" style={{ background: 'hsl(40 30% 70% / 0.2)' }} />
-      <div className="absolute bottom-1/4 left-1/4 w-72 h-72 rounded-full blur-3xl" style={{ background: 'hsl(10 60% 53% / 0.06)' }} />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
