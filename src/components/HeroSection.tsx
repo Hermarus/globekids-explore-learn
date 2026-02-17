@@ -21,14 +21,13 @@ const HeroSection = () => {
 
             {/* Headline */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6 leading-tight">
-              Английский язык{" "}
-              <span className="text-trust">в лучших странах</span>{" "}
-              мира
+              ЯЗЫКОВОЙ ЛАГЕРЬ{" "}
+              <span className="text-trust">В БОРОВОМ</span>
             </h1>
 
             {/* Description */}
             <p className="text-base sm:text-lg text-muted-foreground mb-8 max-w-lg">
-              Международные образовательные лагеря для детей 7–17 лет. Погружение в языковую среду, новые друзья и незабываемые приключения.
+              Lingvo Camp — международный языковой лагерь для детей от 8 до 15 лет с полным погружением в английскую среду, авторской образовательной программой и насыщенной культурной программой в Боровом.
             </p>
 
             {/* Stats */}
