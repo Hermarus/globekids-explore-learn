@@ -12,54 +12,14 @@ import {
 import bgPark from "@/assets/bg-park.jpg";
 
 const benefits = [
-  {
-    icon: GraduationCap,
-    title: "Носители языка",
-    description: "Обучение только с сертифицированными преподавателями из Великобритании и США",
-    color: "primary"
-  },
-  {
-    icon: Globe2,
-    title: "Полное погружение",
-    description: "24/7 англоязычная среда для естественного освоения языка",
-    color: "accent"
-  },
-  {
-    icon: Users,
-    title: "Международные группы",
-    description: "Дети из 15+ стран мира — настоящая практика общения",
-    color: "trust"
-  },
-  {
-    icon: Shield,
-    title: "Безопасность",
-    description: "Круглосуточное сопровождение, страховка и связь с родителями",
-    color: "primary"
-  },
-  {
-    icon: Sparkles,
-    title: "Яркие впечатления",
-    description: "Экскурсии, активности и приключения на всю жизнь",
-    color: "accent"
-  },
-  {
-    icon: HeartHandshake,
-    title: "Индивидуальный подход",
-    description: "Малые группы до 15 человек и персональное внимание",
-    color: "trust"
-  },
-  {
-    icon: BookOpen,
-    title: "Сертификат",
-    description: "Международный сертификат об уровне владения языком",
-    color: "primary"
-  },
-  {
-    icon: Trophy,
-    title: "Результат",
-    description: "Гарантированный прогресс минимум на один уровень",
-    color: "accent"
-  }
+  { icon: GraduationCap, title: "Носители языка", color: "primary" },
+  { icon: Globe2, title: "Полное погружение", color: "accent" },
+  { icon: Users, title: "Международные группы", color: "trust" },
+  { icon: Shield, title: "Безопасность", color: "primary" },
+  { icon: Sparkles, title: "Яркие впечатления", color: "accent" },
+  { icon: HeartHandshake, title: "Индивидуальный подход", color: "trust" },
+  { icon: BookOpen, title: "Сертификат", color: "primary" },
+  { icon: Trophy, title: "Результат", color: "accent" }
 ];
 
 const getColorClasses = (color: string) => {
@@ -135,12 +95,9 @@ const BenefitsSection = () => {
                   <div className={`w-14 h-14 rounded-2xl ${colors.bg} flex items-center justify-center mb-5`}>
                     <Icon className={`w-7 h-7 ${colors.icon}`} />
                   </div>
-                  <h3 className="font-bold text-lg text-foreground mb-2">
+                  <h3 className="font-bold text-lg text-foreground">
                     {benefit.title}
                   </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    {benefit.description}
-                  </p>
                 </CardContent>
               </Card>
             );
