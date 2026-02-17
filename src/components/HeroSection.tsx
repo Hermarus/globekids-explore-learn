@@ -31,16 +31,16 @@ const HeroSection = () => {
             </p>
 
             {/* Stats */}
-            <div className="flex flex-wrap gap-6 mb-8">
-              <div className="flex items-center gap-2 text-sm text-foreground">
+            <div className="flex flex-wrap gap-3 mb-8">
+              <div className="flex items-center gap-2 text-sm text-foreground bg-trust-light px-3 py-1.5 rounded-full">
                 <Users className="w-4 h-4 text-trust" />
                 <span className="font-medium">2500+ учеников</span>
               </div>
-              <div className="flex items-center gap-2 text-sm text-foreground">
+              <div className="flex items-center gap-2 text-sm text-foreground bg-trust-light px-3 py-1.5 rounded-full">
                 <Award className="w-4 h-4 text-trust" />
                 <span className="font-medium">8 лет опыта</span>
               </div>
-              <div className="flex items-center gap-2 text-sm text-foreground">
+              <div className="flex items-center gap-2 text-sm text-foreground bg-trust-light px-3 py-1.5 rounded-full">
                 <Star className="w-4 h-4 text-trust" />
                 <span className="font-medium">4.9 рейтинг</span>
               </div>
@@ -62,14 +62,19 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Right Column - Image with floating cards */}
+          {/* Right Column - Image */}
           <div className="relative">
-            <img
-              src={heroImage}
-              alt="Дети в языковом лагере"
-              className="w-full rounded-2xl object-cover aspect-[4/5] md:aspect-[3/4]"
-            />
-
+            {/* Decorative blur */}
+            <div className="absolute -inset-4 bg-trust/20 rounded-3xl blur-3xl -z-10" />
+            <div className="relative rounded-2xl overflow-hidden shadow-[var(--shadow-medium)] border border-border/50">
+              <img
+                src={heroImage}
+                alt="Дети в языковом лагере"
+                className="w-full object-cover aspect-[4/3] md:aspect-[4/5]"
+              />
+              {/* Gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+            </div>
           </div>
         </div>
       </div>
