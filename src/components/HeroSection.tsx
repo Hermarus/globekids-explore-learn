@@ -8,8 +8,19 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="bg-background pt-28 pb-16 md:pt-36 md:pb-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden"
+      style={{
+        background: `linear-gradient(135deg, hsl(40 20% 98%) 0%, hsl(173 40% 94%) 40%, hsl(40 15% 96%) 70%, hsl(80 20% 94%) 100%)`
+      }}
+    >
+      {/* Decorative blurred shapes */}
+      <div className="absolute top-10 -left-20 w-72 h-72 bg-trust/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-nature/8 rounded-full blur-3xl" />
+      <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-accent/5 rounded-full blur-3xl" />
+      {/* Subtle dot pattern */}
+      <div className="absolute inset-0 pattern-subtle opacity-30" />
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
           {/* Left Column */}
           <div>
