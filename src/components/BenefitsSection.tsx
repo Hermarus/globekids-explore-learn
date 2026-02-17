@@ -74,10 +74,6 @@ const BenefitsSection = () => {
               за рубежом
             </span>
           </h2>
-          <p className="text-lg text-muted-foreground">
-            8 лет мы создаём лучшие условия для развития детей, 
-            совмещая эффективное обучение с незабываемым отдыхом
-          </p>
         </div>
 
         {/* Benefits Grid */}
