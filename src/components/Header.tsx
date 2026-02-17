@@ -25,7 +25,7 @@ const Header = () => {
           <div className="flex items-center gap-2">
             <Globe className="w-6 h-6 text-trust" />
             <span className="text-xl font-bold text-foreground tracking-tight">
-              EduCampGlobal
+              Lingvo Camp
             </span>
           </div>
 
