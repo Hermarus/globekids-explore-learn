@@ -10,15 +10,14 @@ const HeroSection = () => {
   return (
     <section className="relative pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden"
       style={{
-        background: `linear-gradient(135deg, hsl(40 20% 98%) 0%, hsl(173 40% 94%) 40%, hsl(40 15% 96%) 70%, hsl(80 20% 94%) 100%)`
+        background: `linear-gradient(160deg, hsl(173 35% 88%) 0%, hsl(80 20% 90%) 30%, hsl(40 25% 92%) 60%, hsl(173 30% 85%) 100%)`
       }}
     >
-      {/* Decorative blurred shapes */}
-      <div className="absolute top-10 -left-20 w-72 h-72 bg-trust/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-nature/8 rounded-full blur-3xl" />
-      <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-accent/5 rounded-full blur-3xl" />
-      {/* Subtle dot pattern */}
-      <div className="absolute inset-0 pattern-subtle opacity-30" />
+      {/* Large decorative blurred shapes for depth */}
+      <div className="absolute -top-20 -left-32 w-[500px] h-[500px] rounded-full blur-3xl" style={{ background: 'hsl(173 58% 39% / 0.15)' }} />
+      <div className="absolute -bottom-20 -right-20 w-[600px] h-[600px] rounded-full blur-3xl" style={{ background: 'hsl(80 25% 45% / 0.12)' }} />
+      <div className="absolute top-1/3 left-1/2 w-[400px] h-[400px] rounded-full blur-3xl" style={{ background: 'hsl(40 30% 70% / 0.2)' }} />
+      <div className="absolute bottom-1/4 left-1/4 w-72 h-72 rounded-full blur-3xl" style={{ background: 'hsl(10 60% 53% / 0.06)' }} />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
