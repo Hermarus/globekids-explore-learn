@@ -70,23 +70,6 @@ const HeroSection = () => {
               className="w-full rounded-2xl object-cover aspect-[4/5] md:aspect-[3/4]"
             />
 
-            {/* Floating card - Dubai */}
-            <div className="absolute top-6 -left-4 bg-background rounded-xl shadow-medium px-4 py-3 flex items-center gap-3 animate-float">
-              <span className="bg-trust text-trust-foreground text-xs font-bold px-2 py-1 rounded">AE</span>
-              <div>
-                <p className="text-sm font-semibold text-foreground">Дубай</p>
-                <p className="text-xs text-muted-foreground">от 2490$</p>
-              </div>
-            </div>
-
-            {/* Floating card - Vietnam */}
-            <div className="absolute bottom-8 -right-4 bg-background rounded-xl shadow-medium px-4 py-3 flex items-center gap-3 animate-float-delayed">
-              <span className="bg-accent text-accent-foreground text-xs font-bold px-2 py-1 rounded">VN</span>
-              <div>
-                <p className="text-sm font-semibold text-foreground">Вьетнам</p>
-                <p className="text-xs text-muted-foreground">от 1890$</p>
-              </div>
-            </div>
           </div>
         </div>
       </div>
