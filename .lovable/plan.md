@@ -1,21 +1,24 @@
 
 
-# Improve Hero Section Design
+# Add Beautiful Background to Hero Section
 
-## Problems
-- Image aspect ratio (4/5 on mobile, 3/4 on desktop) makes it look too tall and awkward — Dubai cityscape needs a wider crop
-- Left column text lacks vertical centering polish
-- Overall section feels sparse and unbalanced
+## What changes
+Replace the plain white background of the hero section with a visually appealing nature-inspired background that fits the Borovoe camp theme.
 
-## Changes in src/components/HeroSection.tsx
+## Technical approach in `src/components/HeroSection.tsx`
 
-1. **Fix image aspect ratio**: Change from `aspect-[4/5] md:aspect-[3/4]` to `aspect-[4/3] md:aspect-[4/5]` — wider on mobile, slightly tall on desktop but better framed
-2. **Add subtle gradient overlay** on the image bottom for depth (dark gradient fading up)
-3. **Add decorative background element** — a soft teal/accent circle blur behind the image for visual interest
-4. **Improve text column spacing**: Better vertical rhythm with adjusted margins
-5. **Enhance stats row**: Add background pills to each stat for more visual weight
-6. **Add shadow to image**: `shadow-medium` and slight border for a card-like feel
-7. **Vertically center content** with `items-center` (already present) and adjust padding
+1. **Add a subtle nature gradient background** -- use a warm-to-teal gradient inspired by Borovoe's forests and lakes
+2. **Add a decorative pattern or texture** using CSS -- subtle dot pattern or radial gradient for depth
+3. **Apply a layered background** combining:
+   - A soft gradient from warm beige to light teal (forest/nature feel)
+   - A subtle radial glow accent behind the content
+   - Keep text readable with proper contrast
 
-No color, font, or CSS variable changes — purely layout and styling improvements within existing design system.
+## Specific changes
+
+- Change the section's `bg-background` class to a custom gradient background using inline styles or Tailwind classes
+- Add decorative CSS elements (blurred circles/shapes) positioned absolutely behind the content for a modern, layered look
+- Colors will stay within the existing design system (trust teal, accent terracotta, nature olive tones)
+
+No new images or assets needed -- pure CSS/Tailwind styling.
 
