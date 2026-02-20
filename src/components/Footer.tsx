@@ -36,7 +36,7 @@ const Footer = () => {
           <div>
             <h4 className="font-bold text-lg mb-4">Направления</h4>
             <ul className="space-y-3 text-sm text-primary-foreground/70">
-              <li><a href="#" className="hover:text-primary-foreground transition-colors">🇦🇪 Дубай, ОАЭ</a></li>
+              <li><a href="#" className="hover:text-primary-foreground transition-colors">🇰🇿 Боровое, Казахстан</a></li>
               <li><a href="#" className="hover:text-primary-foreground transition-colors">🇻🇳 Фукуок, Вьетнам</a></li>
               <li><a href="#" className="hover:text-primary-foreground transition-colors">Все программы</a></li>
               <li><a href="#" className="hover:text-primary-foreground transition-colors">Расписание смен</a></li>

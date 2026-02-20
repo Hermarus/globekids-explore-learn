@@ -1,22 +1,21 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin, Calendar, Users, Thermometer, ArrowRight } from "lucide-react";
-import dubaiImage from "@/assets/dubai.jpg";
+import borovoeImage from "@/assets/bg-forest.jpg";
 import vietnamImage from "@/assets/vietnam.jpg";
-
 const destinations = [
   {
-    id: "dubai",
-    country: "ОАЭ",
-    city: "Дубай",
-    flag: "🇦🇪",
-    image: dubaiImage,
-    description: "Современный мегаполис с лучшими языковыми школами и безопасной средой для детей",
-    price: "от 2 490$",
+    id: "borovoe",
+    country: "Казахстан",
+    city: "Боровое",
+    flag: "🇰🇿",
+    image: borovoeImage,
+    description: "Живописная природа Борового с озёрами и горами — идеальное место для активного отдыха и изучения английского",
+    price: "от 890$",
     duration: "2 недели",
     groupSize: "12-15 детей",
-    weather: "+32°C",
-    features: ["Проживание 5★", "Экскурсии", "Бассейн", "Пляж"],
+    weather: "+25°C",
+    features: ["Лагерь", "Спорт", "Походы", "Озёра"],
     accent: "accent"
   },
   {
