@@ -221,8 +221,8 @@ const ApplicationForm = () => {
                         className="flex h-12 w-full rounded-xl border border-border bg-card px-4 py-3 text-base ring-offset-background transition-all duration-200 focus:border-primary focus:ring-2 focus:ring-primary/20 focus-visible:outline-none"
                       >
                         <option value="">Выберите направление</option>
-                        <option value="dubai">🇦🇪 Дубай, ОАЭ</option>
-                        <option value="vietnam">🇻🇳 Нячанг, Вьетнам</option>
+                        <option value="borovoe">🇰🇿 Боровое, Казахстан</option>
+                        <option value="vietnam">🇻🇳 Фукуок, Вьетнам</option>
                         <option value="any">Не определился</option>
                       </select>
                     </div>
