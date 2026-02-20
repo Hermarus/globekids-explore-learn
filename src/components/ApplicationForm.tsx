@@ -2,7 +2,9 @@ import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Phone, Mail, MapPin, CheckCircle } from "lucide-react";
+import { ArrowRight, Phone, Mail, MapPin, CheckCircle, Loader2 } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 import bgBeach from "@/assets/bg-beach.jpg";
 
 const ApplicationForm = () => {
@@ -15,6 +17,8 @@ const ApplicationForm = () => {
     destination: ""
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const { toast } = useToast();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     setFormData({
@@ -23,10 +27,29 @@ const ApplicationForm = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here would be form submission logic
-    setIsSubmitted(true);
+    setIsLoading(true);
+
+    try {
+      const { data, error } = await supabase.functions.invoke("send-telegram", {
+        body: formData,
+      });
+
+      if (error) throw error;
+
+      setIsSubmitted(true);
+      setFormData({ parentName: "", phone: "", email: "", childName: "", childAge: "", destination: "" });
+    } catch (error: any) {
+      console.error("Ошибка отправки:", error);
+      toast({
+        title: "Ошибка отправки",
+        description: "Не удалось отправить заявку. Попробуйте позже или свяжитесь с нами по телефону.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -205,9 +228,18 @@ const ApplicationForm = () => {
                     </div>
                   </div>
 
-                  <Button variant="accent" size="lg" className="w-full" type="submit">
-                    Отправить заявку
-                    <ArrowRight className="w-5 h-5" />
+                  <Button variant="accent" size="lg" className="w-full" type="submit" disabled={isLoading}>
+                    {isLoading ? (
+                      <>
+                        <Loader2 className="w-5 h-5 animate-spin" />
+                        Отправка...
+                      </>
+                    ) : (
+                      <>
+                        Отправить заявку
+                        <ArrowRight className="w-5 h-5" />
+                      </>
+                    )}
                   </Button>
 
                   <p className="text-xs text-muted-foreground text-center">
