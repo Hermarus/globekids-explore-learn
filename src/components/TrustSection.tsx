@@ -1,7 +1,15 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Shield, Phone, HeartPulse, Video, Users, MapPin, FileCheck, Clock } from "lucide-react";
+import { 
+  Shield, 
+  Phone, 
+  HeartPulse, 
+  Video, 
+  Users, 
+  MapPin,
+  FileCheck,
+  Clock
+} from "lucide-react";
 import bgForest from "@/assets/bg-forest.jpg";
-import { useLandingContent } from "@/hooks/useLandingContent";
 
 const trustItems = [
   {
@@ -47,8 +55,6 @@ const trustItems = [
 ];
 
 const TrustSection = () => {
-  const { getContent } = useLandingContent();
-
   return (
     <section id="trust" className="section-padding relative overflow-hidden">
       {/* Nature background */}
@@ -63,16 +69,17 @@ const TrustSection = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block text-trust font-semibold text-sm uppercase tracking-wider mb-4">
-            {getContent("trust.label", "Безопасность")}
+            Безопасность
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            {getContent("trust.title", "Доверьте нам самое")}{" "}
+            Доверьте нам самое{" "}
             <span className="bg-gradient-trust bg-clip-text text-transparent">
-              {getContent("trust.title_highlight", "ценное")}
+              ценное
             </span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            {getContent("trust.subtitle", "Мы понимаем, как важно для родителей спокойствие за ребёнка. Поэтому безопасность — наш главный приоритет.")}
+            Мы понимаем, как важно для родителей спокойствие за ребёнка. 
+            Поэтому безопасность — наш главный приоритет.
           </p>
         </div>
 

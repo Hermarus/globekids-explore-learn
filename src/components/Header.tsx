@@ -1,10 +1,8 @@
 import { Globe, Menu, X, MessageCircle } from "lucide-react";
 import { useState } from "react";
-import { useLandingContent } from "@/hooks/useLandingContent";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { getContent } = useLandingContent();
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -13,23 +11,25 @@ const Header = () => {
   };
 
   const navLinks = [
-    { label: getContent("header.nav_destinations", "Направления"), id: "destinations" },
-    { label: getContent("header.nav_benefits", "Преимущества"), id: "benefits" },
-    { label: getContent("header.nav_process", "Как это работает"), id: "process" },
-    { label: getContent("header.nav_trust", "Безопасность"), id: "trust" },
+    { label: "Направления", id: "destinations" },
+    { label: "Преимущества", id: "benefits" },
+    { label: "Как это работает", id: "process" },
+    { label: "Безопасность", id: "trust" },
   ];
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex items-center justify-between">
+          {/* Logo */}
           <div className="flex items-center gap-2">
             <Globe className="w-6 h-6 text-trust" />
             <span className="text-xl font-bold text-foreground tracking-tight">
-              {getContent("header.brand", "Lingvo Camp")}
+              Lingvo Camp
             </span>
           </div>
 
+          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <button
@@ -42,6 +42,7 @@ const Header = () => {
             ))}
           </nav>
 
+          {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-3">
             <a
               href="http://wa.me/77784399162"
@@ -56,10 +57,11 @@ const Header = () => {
               onClick={() => scrollToSection("apply")}
               className="bg-accent text-accent-foreground px-6 py-2.5 rounded-full font-medium hover:opacity-90 transition-opacity"
             >
-              {getContent("header.cta", "Оставить заявку")}
+              Оставить заявку
             </button>
           </div>
 
+          {/* Mobile menu button */}
           <button
             className="md:hidden p-2 text-foreground"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -69,6 +71,7 @@ const Header = () => {
           </button>
         </div>
 
+        {/* Mobile menu */}
         {mobileMenuOpen && (
           <div className="md:hidden mt-4 pt-4 border-t border-border space-y-4">
             {navLinks.map((link) => (
@@ -84,7 +87,7 @@ const Header = () => {
               onClick={() => scrollToSection("apply")}
               className="w-full bg-accent text-accent-foreground px-6 py-3 rounded-full font-medium hover:opacity-90 transition-opacity"
             >
-              {getContent("header.cta", "Оставить заявку")}
+              Оставить заявку
             </button>
           </div>
         )}

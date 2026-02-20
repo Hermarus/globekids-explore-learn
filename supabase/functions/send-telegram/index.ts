@@ -1,6 +1,5 @@
 import "https://deno.land/x/xhr@0.1.0/mod.ts";
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2.39.3";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -9,8 +8,8 @@ const corsHeaders = {
 };
 
 const destinationLabels: Record<string, string> = {
-  borovoe: "🇰🇿 Боровое, Казахстан",
-  vietnam: "🇻🇳 Фукуок, Вьетнам",
+  dubai: "🇦🇪 Дубай, ОАЭ",
+  vietnam: "🇻🇳 Нячанг, Вьетнам",
   any: "Не определился",
 };
 
@@ -71,20 +70,6 @@ serve(async (req) => {
       console.error("Telegram API error:", telegramData);
       throw new Error(telegramData.description || "Telegram API error");
     }
-
-    // Save to database
-    const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
-    const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
-    const supabaseClient = createClient(supabaseUrl, supabaseKey);
-
-    await supabaseClient.from("applications").insert({
-      parent_name: parentName,
-      phone,
-      email: email || null,
-      child_name: childName || null,
-      child_age: childAge || null,
-      destination: destination || null,
-    });
 
     return new Response(JSON.stringify({ success: true }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
