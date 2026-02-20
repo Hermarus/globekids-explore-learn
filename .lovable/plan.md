@@ -1,11 +1,52 @@
 
+# Отправка заявок в Telegram через бота
 
-# Remove Description Text from Benefits Section
+## Что будет сделано
+При отправке формы на сайте заявка автоматически отправляется сотруднику в Telegram через бота.
 
-## What changes
-Remove the paragraph text "8 лет мы создаём лучшие условия для развития детей, совмещая эффективное обучение с незабываемым отдыхом" from the Benefits section header in `src/components/BenefitsSection.tsx`.
+## Шаги реализации
 
-## Technical details
-- Delete the `<p>` element containing this text (around line 80-83 in the section header area)
-- Keep the "Почему мы" label and the main heading intact
+### 1. Подключить Lovable Cloud
+Активировать Cloud для создания серверной функции (edge function), которая будет безопасно отправлять сообщения в Telegram.
 
+### 2. Сохранить секреты
+Безопасно сохранить два значения:
+- **TELEGRAM_BOT_TOKEN** -- токен вашего бота (от @BotFather)
+- **TELEGRAM_CHAT_ID** -- ID чата, куда отправлять заявки
+
+### 3. Создать Edge Function `send-telegram`
+Серверная функция, которая:
+- Принимает данные формы (имя, телефон, email, имя ребёнка, возраст, направление)
+- Форматирует красивое сообщение с эмодзи
+- Отправляет его через Telegram Bot API (`sendMessage`)
+- Возвращает результат на фронтенд
+
+### 4. Обновить форму заявки
+Изменить `ApplicationForm.tsx`:
+- При отправке формы вызывать edge function
+- Показывать состояние загрузки (спиннер на кнопке)
+- Обрабатывать ошибки -- показывать уведомление, если отправка не удалась
+- Показывать успех только при реальной отправке
+
+## Формат сообщения в Telegram
+
+```text
+Новая заявка с сайта!
+
+Родитель: Иван Иванов
+Телефон: +7 (800) 123-45-67
+Email: ivan@mail.ru
+Ребёнок: Маша, 12 лет
+Направление: Дубай, ОАЭ
+```
+
+## Техническая архитектура
+
+- **Фронтенд** (ApplicationForm.tsx) -> вызывает edge function через `supabase.functions.invoke('send-telegram', ...)`
+- **Edge Function** (supabase/functions/send-telegram/index.ts) -> отправляет POST в `https://api.telegram.org/bot{TOKEN}/sendMessage`
+- Токен бота хранится в секретах Lovable Cloud, не в коде
+
+## Что потребуется от вас
+После одобрения плана я попрошу вас:
+1. Подключить Lovable Cloud (кнопка в интерфейсе)
+2. Добавить токен бота и chat ID через безопасное хранилище секретов
