@@ -1,4 +1,5 @@
 import { FileText, Plane, BookOpen, Home, PartyPopper } from "lucide-react";
+import { useLandingContent } from "@/hooks/useLandingContent";
 
 const steps = [
   {
@@ -52,22 +53,24 @@ const getStepColors = (accent: string) => {
 };
 
 const ProcessSection = () => {
+  const { getContent } = useLandingContent();
+
   return (
     <section id="process" className="section-padding bg-nature-muted/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block text-trust font-semibold text-sm uppercase tracking-wider mb-4">
-            Как это работает
+            {getContent("process.label", "Как это работает")}
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            5 шагов к{" "}
+            {getContent("process.title", "5 шагов к")}{" "}
             <span className="bg-gradient-nature bg-clip-text text-transparent">
-              незабываемому лету
+              {getContent("process.title_highlight", "незабываемому лету")}
             </span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Простой и понятный процесс от заявки до получения результата
+            {getContent("process.subtitle", "Простой и понятный процесс от заявки до получения результата")}
           </p>
         </div>
 
