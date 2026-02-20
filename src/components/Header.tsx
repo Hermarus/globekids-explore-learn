@@ -1,4 +1,4 @@
-import { Globe, Menu, X } from "lucide-react";
+import { Globe, Menu, X, MessageCircle } from "lucide-react";
 import { useState } from "react";
 
 const Header = () => {
@@ -43,12 +43,23 @@ const Header = () => {
           </nav>
 
           {/* Desktop CTA */}
-          <button
-            onClick={() => scrollToSection("apply")}
-            className="hidden md:block bg-accent text-accent-foreground px-6 py-2.5 rounded-full font-medium hover:opacity-90 transition-opacity"
-          >
-            Оставить заявку
-          </button>
+          <div className="hidden md:flex items-center gap-3">
+            <a
+              href="http://wa.me/77784399162"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-full bg-green-500 hover:bg-green-600 text-white flex items-center justify-center transition-colors"
+              aria-label="WhatsApp"
+            >
+              <MessageCircle className="w-5 h-5" />
+            </a>
+            <button
+              onClick={() => scrollToSection("apply")}
+              className="bg-accent text-accent-foreground px-6 py-2.5 rounded-full font-medium hover:opacity-90 transition-opacity"
+            >
+              Оставить заявку
+            </button>
+          </div>
 
           {/* Mobile menu button */}
           <button

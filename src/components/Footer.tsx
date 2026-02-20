@@ -1,4 +1,4 @@
-import { GraduationCap, Plane, Phone, Mail, MapPin, Instagram, Send } from "lucide-react";
+import { GraduationCap, Plane, Phone, Mail, MapPin, Instagram, MessageCircle } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -26,8 +26,8 @@ const Footer = () => {
               <a href="#" className="w-10 h-10 rounded-lg bg-primary-foreground/10 hover:bg-primary-foreground/20 flex items-center justify-center transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-lg bg-primary-foreground/10 hover:bg-primary-foreground/20 flex items-center justify-center transition-colors">
-                <Send className="w-5 h-5" />
+              <a href="http://wa.me/77784399162" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg bg-primary-foreground/10 hover:bg-primary-foreground/20 flex items-center justify-center transition-colors">
+                <MessageCircle className="w-5 h-5" />
               </a>
             </div>
           </div>
@@ -37,7 +37,7 @@ const Footer = () => {
             <h4 className="font-bold text-lg mb-4">Направления</h4>
             <ul className="space-y-3 text-sm text-primary-foreground/70">
               <li><a href="#" className="hover:text-primary-foreground transition-colors">🇦🇪 Дубай, ОАЭ</a></li>
-              <li><a href="#" className="hover:text-primary-foreground transition-colors">🇻🇳 Нячанг, Вьетнам</a></li>
+              <li><a href="#" className="hover:text-primary-foreground transition-colors">🇻🇳 Фукуок, Вьетнам</a></li>
               <li><a href="#" className="hover:text-primary-foreground transition-colors">Все программы</a></li>
               <li><a href="#" className="hover:text-primary-foreground transition-colors">Расписание смен</a></li>
             </ul>
@@ -60,11 +60,17 @@ const Footer = () => {
             <ul className="space-y-3 text-sm">
               <li className="flex items-center gap-2 text-primary-foreground/70">
                 <Phone className="w-4 h-4 text-primary" />
-                <span>+7 (800) 123-45-67</span>
+                <span>+7 (778) 439-91-62</span>
               </li>
               <li className="flex items-center gap-2 text-primary-foreground/70">
                 <Mail className="w-4 h-4 text-primary" />
                 <span>info@educamp.ru</span>
+              </li>
+              <li>
+                <a href="http://wa.me/77784399162" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+                  <MessageCircle className="w-4 h-4 text-primary" />
+                  <span>WhatsApp</span>
+                </a>
               </li>
               <li className="flex items-start gap-2 text-primary-foreground/70">
                 <MapPin className="w-4 h-4 text-primary mt-0.5" />
