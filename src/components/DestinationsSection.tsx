@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { MapPin, Calendar, Users, Thermometer, ArrowRight } from "lucide-react";
+import { MapPin, Calendar, Users, Thermometer, ArrowRight, Instagram, Play } from "lucide-react";
 import borovoeImage from "@/assets/bg-forest.jpg";
 import vietnamImage from "@/assets/vietnam.jpg";
 const destinations = [
@@ -16,7 +16,8 @@ const destinations = [
     groupSize: "12-15 детей",
     weather: "+25°C",
     features: ["Лагерь", "Спорт", "Походы", "Озёра"],
-    accent: "accent"
+    accent: "accent",
+    reelUrl: "https://www.instagram.com/reel/DQcJvScDEUa/?igsh=MWFiYXhtaGpmd2Zydg=="
   },
   {
     id: "vietnam",
@@ -89,6 +90,23 @@ const DestinationsSection = () => {
                 <div className={`absolute top-4 right-4 ${dest.accent === 'accent' ? 'bg-gradient-accent' : 'bg-gradient-primary'} text-primary-foreground rounded-xl px-4 py-2`}>
                   <p className="font-bold text-lg">{dest.price}</p>
                 </div>
+
+                {/* Instagram Reel link */}
+                {dest.reelUrl && (
+                  <a
+                    href={dest.reelUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="absolute bottom-4 right-4 flex items-center gap-2 bg-card/90 backdrop-blur-sm rounded-xl px-3 py-2 hover:bg-card transition-colors group/reel"
+                  >
+                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[hsl(330,80%,55%)] via-[hsl(15,90%,55%)] to-[hsl(45,95%,55%)] flex items-center justify-center">
+                      <Play className="w-4 h-4 text-white fill-white" />
+                    </div>
+                    <span className="text-xs font-semibold text-foreground group-hover/reel:text-primary transition-colors">
+                      Смотреть Reels
+                    </span>
+                  </a>
+                )}
               </div>
 
               <CardContent className="p-6 sm:p-8">
