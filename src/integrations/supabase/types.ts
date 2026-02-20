@@ -47,6 +47,27 @@ export type Database = {
         }
         Relationships: []
       }
+      landing_content: {
+        Row: {
+          key: string
+          type: string
+          updated_at: string
+          value: string
+        }
+        Insert: {
+          key: string
+          type?: string
+          updated_at?: string
+          value: string
+        }
+        Update: {
+          key?: string
+          type?: string
+          updated_at?: string
+          value?: string
+        }
+        Relationships: []
+      }
       user_roles: {
         Row: {
           id: string
