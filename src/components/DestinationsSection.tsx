@@ -11,7 +11,7 @@ const destinations = [
     flag: "🇰🇿",
     image: borovoeImage,
     description: "Живописная природа Борового с озёрами и горами — идеальное место для активного отдыха и изучения английского",
-    price: "от 890$",
+    
     duration: "2 недели",
     groupSize: "12-15 детей",
     weather: "+25°C",
@@ -26,7 +26,7 @@ const destinations = [
     flag: "🇻🇳",
     image: vietnamImage,
     description: "Тропический остров с погружением в международную атмосферу и активным отдыхом для детей 8–15 лет",
-    price: "от 1 890$",
+    
     duration: "2 недели",
     groupSize: "12-15 детей",
     weather: "+30°C",
@@ -86,10 +86,7 @@ const DestinationsSection = () => {
                   </div>
                 </div>
 
-                {/* Price badge */}
-                <div className={`absolute top-4 right-4 ${dest.accent === 'accent' ? 'bg-gradient-accent' : 'bg-gradient-primary'} text-primary-foreground rounded-xl px-4 py-2`}>
-                  <p className="font-bold text-lg">{dest.price}</p>
-                </div>
+
 
                 {/* Instagram Reel link */}
                 {dest.reelUrl && (
