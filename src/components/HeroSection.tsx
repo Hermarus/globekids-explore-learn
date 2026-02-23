@@ -85,19 +85,25 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <button
                 onClick={scrollToApply}
-                className="inline-flex items-center justify-center gap-2 bg-accent text-accent-foreground px-8 py-4 rounded-xl font-semibold text-base hover:opacity-90 transition-opacity shadow-glow"
+                className="inline-flex flex-col items-center justify-center bg-accent text-accent-foreground px-8 py-4 rounded-xl font-semibold text-base hover:opacity-90 transition-opacity shadow-glow"
               >
-                Забронировать место
-                <ArrowRight className="w-5 h-5" />
+                <span className="text-xs font-bold uppercase tracking-wider">Весенняя смена</span>
+                <span className="inline-flex items-center gap-2">
+                  Забронировать место
+                  <ArrowRight className="w-5 h-5" />
+                </span>
               </button>
               <a
                 href="https://www.instagram.com/p/DUOJgFeEgaL/?img_index=2&igsh=MWMyZDE2NXpteG1yNw=="
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 border-2 border-border text-foreground px-8 py-4 rounded-xl font-semibold text-base hover:bg-muted transition-colors"
+                className="inline-flex flex-col items-center justify-center border-2 border-border text-foreground px-8 py-4 rounded-xl font-semibold text-base hover:bg-muted transition-colors"
               >
-                <Play className="w-5 h-5" />
-                Смотреть видео
+                <span className="text-xs font-bold uppercase tracking-wider">Летние смены</span>
+                <span className="inline-flex items-center gap-2">
+                  <Play className="w-5 h-5" />
+                  Смотреть видео
+                </span>
               </a>
             </div>
           </div>
