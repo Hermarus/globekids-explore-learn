@@ -30,7 +30,8 @@ const destinations = [
     groupSize: "12-15 детей",
     weather: "+30°C",
     features: ["Остров", "Дайвинг", "Природа", "Море"],
-    accent: "primary"
+    accent: "primary",
+    reelUrl: "https://www.instagram.com/reel/DQcJvScDEUa/?igsh=MWFiYXhtaGpmd2Zydg=="
   },
   {
     id: "dubai",
