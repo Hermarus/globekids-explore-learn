@@ -69,9 +69,9 @@ const BenefitsSection = () => {
             Почему мы
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Преимущества обучения{" "}
+            Преимущества международного лагеря{" "}
             <span className="bg-gradient-nature bg-clip-text text-transparent">
-              за рубежом
+              Lingvo Camp
             </span>
           </h2>
         </div>

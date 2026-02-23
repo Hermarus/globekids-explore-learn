@@ -2,7 +2,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { 
   Shield, 
   Phone, 
-  HeartPulse, 
   Video, 
   Users, 
   MapPin,
@@ -15,17 +14,12 @@ const trustItems = [
   {
     icon: Shield,
     title: "Лицензия и опыт",
-    description: "Официальная туроператорская лицензия, 8 лет работы, 2500+ довольных клиентов"
+    description: "Официальная туроператорская лицензия, 10 лет работы, 8000+ довольных родителей"
   },
   {
     icon: Phone,
     title: "Связь 24/7",
     description: "Родители на связи с кураторами и детьми в любое время через мессенджеры"
-  },
-  {
-    icon: HeartPulse,
-    title: "Медицинская страховка",
-    description: "Полная международная страховка с покрытием до $50 000 на каждого ребёнка"
   },
   {
     icon: Video,
@@ -34,13 +28,13 @@ const trustItems = [
   },
   {
     icon: Users,
-    title: "Кураторы-вожатые",
+    title: "Профессионально подготовленные вожатые",
     description: "1 куратор на 5 детей с педагогическим образованием и опытом работы"
   },
   {
     icon: MapPin,
     title: "Проверенные локации",
-    description: "Только сертифицированные школы и отели с высшим рейтингом безопасности"
+    description: "Только безопасные локации с высоким рейтингом"
   },
   {
     icon: FileCheck,
@@ -109,18 +103,8 @@ const TrustSection = () => {
           })}
         </div>
 
-        {/* Trust badges */}
+        {/* Trust badge */}
         <div className="mt-16 flex flex-wrap justify-center items-center gap-8">
-          <div className="flex items-center gap-3 bg-card/95 backdrop-blur-sm rounded-2xl px-6 py-4 shadow-soft">
-            <div className="w-12 h-12 rounded-xl bg-trust-light flex items-center justify-center">
-              <Shield className="w-6 h-6 text-trust" />
-            </div>
-            <div>
-              <p className="font-bold text-foreground">Лицензия РФ</p>
-              <p className="text-xs text-muted-foreground">№ ТО-001234</p>
-            </div>
-          </div>
-          
           <div className="flex items-center gap-3 bg-card/95 backdrop-blur-sm rounded-2xl px-6 py-4 shadow-soft">
             <div className="w-12 h-12 rounded-xl bg-nature-light flex items-center justify-center text-2xl">
               ⭐
@@ -128,16 +112,6 @@ const TrustSection = () => {
             <div>
               <p className="font-bold text-foreground">Рейтинг 4.9/5</p>
               <p className="text-xs text-muted-foreground">350+ отзывов</p>
-            </div>
-          </div>
-          
-          <div className="flex items-center gap-3 bg-card/95 backdrop-blur-sm rounded-2xl px-6 py-4 shadow-soft">
-            <div className="w-12 h-12 rounded-xl bg-accent-light flex items-center justify-center text-2xl">
-              🏆
-            </div>
-            <div>
-              <p className="font-bold text-foreground">Лучший лагерь</p>
-              <p className="text-xs text-muted-foreground">2023, 2024</p>
             </div>
           </div>
         </div>

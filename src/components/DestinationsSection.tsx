@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { MapPin, Calendar, Users, Thermometer, ArrowRight, Instagram, Play } from "lucide-react";
 import borovoeImage from "@/assets/bg-forest.jpg";
 import vietnamImage from "@/assets/vietnam.jpg";
+import dubaiImage from "@/assets/dubai.jpg";
 const destinations = [
   {
     id: "borovoe",
@@ -10,8 +11,7 @@ const destinations = [
     city: "Боровое",
     flag: "🇰🇿",
     image: borovoeImage,
-    description: "Живописная природа Борового с озёрами и горами — идеальное место для активного отдыха и изучения английского",
-    
+    description: "Английский язык в формате полного погружения среди соснового леса и чистейшего воздуха. Дети 8-15 лет учатся говорить свободно через живое общение с носителями, активные программы и командные проекты. Природа Борового усиливает концентрацию, уверенность и результат — это не просто лагерь, это среда роста.",
     duration: "2 недели",
     groupSize: "12-15 детей",
     weather: "+25°C",
@@ -25,13 +25,25 @@ const destinations = [
     city: "Фукуок",
     flag: "🇻🇳",
     image: vietnamImage,
-    description: "Тропический остров с погружением в международную атмосферу и активным отдыхом для детей 8–15 лет",
-    
+    description: "Lingvo Camp на Фукуоке — это языковое погружение с носителями в сочетании с яркой международной программой. Полное погружение в английский, международная среда общения, экскурсии по острову и пляжные активности.",
     duration: "2 недели",
     groupSize: "12-15 детей",
     weather: "+30°C",
     features: ["Остров", "Дайвинг", "Природа", "Море"],
     accent: "primary"
+  },
+  {
+    id: "dubai",
+    country: "ОАЭ",
+    city: "Дубай",
+    flag: "🇦🇪",
+    image: dubaiImage,
+    description: "Английский язык в международной среде одного из самых динамичных городов мира. Lingvo Camp в Дубае — это обучение с носителями, развитие глобального мышления и насыщенная программа в премиальном формате.",
+    duration: "2 недели",
+    groupSize: "12-15 детей",
+    weather: "+35°C",
+    features: ["Город", "Экскурсии", "Премиум", "Море"],
+    accent: "trust"
   }
 ];
 
@@ -62,7 +74,7 @@ const DestinationsSection = () => {
         </div>
 
         {/* Destination Cards */}
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
           {destinations.map((dest) => (
             <Card 
               key={dest.id} 

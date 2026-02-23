@@ -1,4 +1,4 @@
-import { GraduationCap, Plane, Phone, Mail, MapPin, Instagram, MessageCircle } from "lucide-react";
+import { GraduationCap, Plane, Phone, MapPin, Instagram, MessageCircle } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -20,7 +20,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-primary-foreground/70 text-sm leading-relaxed">
-              Международные образовательные лагеря с изучением английского языка для детей 7–17 лет.
+              Международные образовательные лагеря с изучением английского языка для детей 8–15 лет.
             </p>
             <div className="flex gap-3">
               <a href="#" className="w-10 h-10 rounded-lg bg-primary-foreground/10 hover:bg-primary-foreground/20 flex items-center justify-center transition-colors">
@@ -38,6 +38,7 @@ const Footer = () => {
             <ul className="space-y-3 text-sm text-primary-foreground/70">
               <li><a href="#" className="hover:text-primary-foreground transition-colors">🇰🇿 Боровое, Казахстан</a></li>
               <li><a href="#" className="hover:text-primary-foreground transition-colors">🇻🇳 Фукуок, Вьетнам</a></li>
+              <li><a href="#" className="hover:text-primary-foreground transition-colors">🇦🇪 Дубай, ОАЭ</a></li>
               <li><a href="#" className="hover:text-primary-foreground transition-colors">Все программы</a></li>
               <li><a href="#" className="hover:text-primary-foreground transition-colors">Расписание смен</a></li>
             </ul>
@@ -62,9 +63,11 @@ const Footer = () => {
                 <Phone className="w-4 h-4 text-primary" />
                 <span>+7 (778) 439-91-62</span>
               </li>
-              <li className="flex items-center gap-2 text-primary-foreground/70">
-                <Mail className="w-4 h-4 text-primary" />
-                <span>info@educamp.ru</span>
+              <li>
+                <a href="https://instagram.com/lingvocamp" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+                  <Instagram className="w-4 h-4 text-primary" />
+                  <span>@lingvocamp</span>
+                </a>
               </li>
               <li>
                 <a href="http://wa.me/77784399162" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-primary-foreground/70 hover:text-primary-foreground transition-colors">
@@ -74,7 +77,7 @@ const Footer = () => {
               </li>
               <li className="flex items-start gap-2 text-primary-foreground/70">
                 <MapPin className="w-4 h-4 text-primary mt-0.5" />
-                <span>Москва, ул. Пресненская, 10</span>
+                <span>Бурабай / Улица Приозёрная, 20Б</span>
               </li>
             </ul>
           </div>
