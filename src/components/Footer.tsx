@@ -1,4 +1,4 @@
-import { GraduationCap, Plane, Phone, MapPin, Instagram, MessageCircle } from "lucide-react";
+import { Globe, Phone, MapPin, Instagram, MessageCircle } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -8,16 +8,10 @@ const Footer = () => {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <div className="relative">
-                <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
-                  <GraduationCap className="w-5 h-5 text-primary-foreground" />
-                </div>
-                <Plane className="w-4 h-4 text-accent absolute -top-1 -right-1" />
-              </div>
-              <div>
-                <span className="font-bold text-lg">EduCamp</span>
-                <span className="text-primary font-semibold">Global</span>
-              </div>
+              <Globe className="w-6 h-6 text-primary" />
+              <span className="font-bold text-xl tracking-tight">
+                Lingvo Camp
+              </span>
             </div>
             <p className="text-primary-foreground/70 text-sm leading-relaxed">
               Международные образовательные лагеря с изучением английского языка для детей 8–15 лет.
@@ -85,7 +79,7 @@ const Footer = () => {
 
         {/* Bottom */}
         <div className="pt-8 border-t border-primary-foreground/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/50">
-          <p>© 2025 EduCampGlobal. Все права защищены.</p>
+          <p>© 2025 Lingvo Camp. Все права защищены.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-primary-foreground transition-colors">Политика конфиденциальности</a>
             <a href="#" className="hover:text-primary-foreground transition-colors">Договор оферты</a>
