@@ -89,22 +89,20 @@ const HeroSection = () => {
               >
                 <span className="text-xs font-bold uppercase tracking-wider">Весенняя смена</span>
                 <span className="inline-flex items-center gap-2">
-                  Забронировать место
+                  Наурыз 2026
                   <ArrowRight className="w-5 h-5" />
                 </span>
               </button>
-              <a
-                href="https://www.instagram.com/p/DUOJgFeEgaL/?img_index=2&igsh=MWMyZDE2NXpteG1yNw=="
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex flex-col items-center justify-center border-2 border-border text-foreground px-8 py-4 rounded-xl font-semibold text-base hover:bg-muted transition-colors"
+              <button
+                onClick={scrollToApply}
+                className="inline-flex flex-col items-center justify-center bg-accent text-accent-foreground px-8 py-4 rounded-xl font-semibold text-base hover:opacity-90 transition-opacity shadow-glow"
               >
                 <span className="text-xs font-bold uppercase tracking-wider">Летние смены</span>
                 <span className="inline-flex items-center gap-2">
-                  <Play className="w-5 h-5" />
-                  Смотреть видео
+                  2026
+                  <ArrowRight className="w-5 h-5" />
                 </span>
-              </a>
+              </button>
             </div>
           </div>
 
