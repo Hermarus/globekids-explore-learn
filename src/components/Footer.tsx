@@ -66,11 +66,8 @@ const Footer = () => {
         </div>
 
         {/* Bottom */}
-        <div className="pt-8 border-t border-primary-foreground/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/50">
-          <p>© 2025 Lingvo Camp. Все права защищены.</p>
-          <div className="flex gap-6">
-            <Link to="/privacy" className="hover:text-primary-foreground transition-colors">Политика конфиденциальности</Link>
-          </div>
+        <div className="pt-8 border-t border-primary-foreground/10 flex justify-center items-center text-sm text-primary-foreground/50">
+          <Link to="/privacy" className="hover:text-primary-foreground transition-colors">Политика конфиденциальности</Link>
         </div>
       </div>
     </footer>
