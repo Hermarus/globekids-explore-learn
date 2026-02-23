@@ -4,6 +4,7 @@ import DestinationsSection from "@/components/DestinationsSection";
 import BenefitsSection from "@/components/BenefitsSection";
 import ProcessSection from "@/components/ProcessSection";
 import TrustSection from "@/components/TrustSection";
+import InstagramSection from "@/components/InstagramSection";
 import ApplicationForm from "@/components/ApplicationForm";
 import Footer from "@/components/Footer";
 
@@ -17,6 +18,7 @@ const Index = () => {
         <BenefitsSection />
         <ProcessSection />
         <TrustSection />
+        <InstagramSection />
         <ApplicationForm />
       </main>
       <Footer />
