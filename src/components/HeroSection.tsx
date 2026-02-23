@@ -90,10 +90,15 @@ const HeroSection = () => {
                 Забронировать место
                 <ArrowRight className="w-5 h-5" />
               </button>
-              <button className="inline-flex items-center justify-center gap-2 border-2 border-border text-foreground px-8 py-4 rounded-xl font-semibold text-base hover:bg-muted transition-colors">
+              <a
+                href="https://www.instagram.com/p/DUOJgFeEgaL/?img_index=2&igsh=MWMyZDE2NXpteG1yNw=="
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 border-2 border-border text-foreground px-8 py-4 rounded-xl font-semibold text-base hover:bg-muted transition-colors"
+              >
                 <Play className="w-5 h-5" />
                 Смотреть видео
-              </button>
+              </a>
             </div>
           </div>
 
