@@ -41,19 +41,39 @@ const HeroSection = () => {
             </h1>
 
             {/* Description */}
-            <p className="text-base sm:text-lg text-muted-foreground mb-8 max-w-lg">
-              Lingvo Camp — международный языковой лагерь для детей от 8 до 15 лет с полным погружением в английскую среду, авторской образовательной программой и насыщенной культурной программой в Боровом.
+            <p className="text-sm sm:text-base text-muted-foreground mb-2 max-w-lg">
+              Международный языковой лагерь в Боровом для детей 8–15 лет
             </p>
+            <p className="text-base sm:text-lg text-muted-foreground mb-8 max-w-lg">
+              Lingvo Camp — это пространство, где дети из разных стран учатся, общаются и развиваются в атмосфере полного языкового погружения. Мы создаём живую международную среду, в которой ребёнок начинает говорить на английском свободно, уверенно и без страха.
+            </p>
+
+            {/* Stats */}
+            {/* Feature bullets */}
+            <div className="flex flex-wrap gap-3 mb-4">
+              <div className="flex items-center gap-2 text-sm text-foreground bg-trust-light px-3 py-1.5 rounded-full">
+                <Star className="w-4 h-4 text-trust" />
+                <span className="font-medium">Английский язык с носителями</span>
+              </div>
+              <div className="flex items-center gap-2 text-sm text-foreground bg-trust-light px-3 py-1.5 rounded-full">
+                <Users className="w-4 h-4 text-trust" />
+                <span className="font-medium">Международная среда общения</span>
+              </div>
+              <div className="flex items-center gap-2 text-sm text-foreground bg-trust-light px-3 py-1.5 rounded-full">
+                <Sparkles className="w-4 h-4 text-trust" />
+                <span className="font-medium">Природа соснового леса и чистый воздух</span>
+              </div>
+            </div>
 
             {/* Stats */}
             <div className="flex flex-wrap gap-3 mb-8">
               <div className="flex items-center gap-2 text-sm text-foreground bg-trust-light px-3 py-1.5 rounded-full">
                 <Users className="w-4 h-4 text-trust" />
-                <span className="font-medium">2500+ учеников</span>
+                <span className="font-medium">8000+ родителей</span>
               </div>
               <div className="flex items-center gap-2 text-sm text-foreground bg-trust-light px-3 py-1.5 rounded-full">
                 <Award className="w-4 h-4 text-trust" />
-                <span className="font-medium">8 лет опыта</span>
+                <span className="font-medium">10 лет опыта</span>
               </div>
               <div className="flex items-center gap-2 text-sm text-foreground bg-trust-light px-3 py-1.5 rounded-full">
                 <Star className="w-4 h-4 text-trust" />

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Phone, Mail, MapPin, CheckCircle, Loader2 } from "lucide-react";
+import { ArrowRight, Phone, Instagram, MapPin, CheckCircle, Loader2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import bgBeach from "@/assets/bg-beach.jpg";
@@ -110,18 +110,18 @@ const ApplicationForm = () => {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Телефон</p>
-                  <p className="font-semibold text-foreground">+7 (800) 123-45-67</p>
+                  <p className="font-semibold text-foreground">+7 (778) 439-91-62</p>
                 </div>
               </div>
-              <div className="flex items-center gap-3 bg-card/95 backdrop-blur-sm rounded-xl p-4 shadow-soft">
+              <a href="https://instagram.com/lingvocamp" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 bg-card/95 backdrop-blur-sm rounded-xl p-4 shadow-soft hover:shadow-medium transition-shadow">
                 <div className="w-10 h-10 rounded-lg bg-primary-light flex items-center justify-center">
-                  <Mail className="w-5 h-5 text-primary" />
+                  <Instagram className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground">Email</p>
-                  <p className="font-semibold text-foreground">info@educamp.ru</p>
+                  <p className="text-sm text-muted-foreground">Instagram</p>
+                  <p className="font-semibold text-foreground">@lingvocamp</p>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
 
@@ -201,9 +201,9 @@ const ApplicationForm = () => {
                         <Input
                           type="number"
                           name="childAge"
-                          placeholder="7-17"
-                          min="7"
-                          max="17"
+                        placeholder="8-15"
+                        min="8"
+                        max="15"
                           value={formData.childAge}
                           onChange={handleChange}
                         />
@@ -223,6 +223,7 @@ const ApplicationForm = () => {
                         <option value="">Выберите направление</option>
                         <option value="borovoe">🇰🇿 Боровое, Казахстан</option>
                         <option value="vietnam">🇻🇳 Фукуок, Вьетнам</option>
+                        <option value="dubai">🇦🇪 Дубай, ОАЭ</option>
                         <option value="any">Не определился</option>
                       </select>
                     </div>
