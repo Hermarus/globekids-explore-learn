@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin, Calendar, Users, Thermometer, ArrowRight, Instagram, Play } from "lucide-react";
 import borovoeImage from "@/assets/bg-forest.jpg";
-import vietnamImage from "@/assets/vietnam.jpg";
+import vietnamImage from "@/assets/vietnam-new.jpg";
 import dubaiImage from "@/assets/dubai.jpg";
 const destinations = [
   {
