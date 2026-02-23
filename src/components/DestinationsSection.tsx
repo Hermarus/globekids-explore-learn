@@ -31,7 +31,7 @@ const destinations = [
     weather: "+30°C",
     features: ["Остров", "Дайвинг", "Природа", "Море"],
     accent: "primary",
-    reelUrl: "https://www.instagram.com/reel/DQcJvScDEUa/?igsh=MWFiYXhtaGpmd2Zydg=="
+    reelUrl: "https://www.instagram.com/p/DUOJgFeEgaL/?igsh=MWMyZDE2NXpteG1yNw=="
   },
   {
     id: "dubai",
