@@ -1,5 +1,5 @@
 import { Play, Users, Award, Star, ArrowRight, Sparkles } from "lucide-react";
-import heroImage from "@/assets/hero-dubai.jpg";
+import heroImage from "@/assets/hero-camp.jpg";
 import bgForest from "@/assets/bg-forest.jpg";
 
 const HeroSection = () => {
@@ -31,7 +31,7 @@ const HeroSection = () => {
             {/* Tagline badge */}
             <div className="inline-flex items-center gap-2 bg-trust-light text-trust px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Sparkles className="w-4 h-4" />
-              Лето 2025 — набор открыт!
+              Лето 2026 — набор открыт!
             </div>
 
             {/* Headline */}
