@@ -104,7 +104,7 @@ const ApplicationForm = () => {
 
             {/* Contact info */}
             <div className="grid sm:grid-cols-2 gap-4">
-              <div className="flex items-center gap-3 bg-card/95 backdrop-blur-sm rounded-xl p-4 shadow-soft">
+              <a href="https://wa.me/77784399162" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 bg-card/95 backdrop-blur-sm rounded-xl p-4 shadow-soft hover:shadow-medium transition-shadow">
                 <div className="w-10 h-10 rounded-lg bg-primary-light flex items-center justify-center">
                   <Phone className="w-5 h-5 text-primary" />
                 </div>
@@ -112,7 +112,7 @@ const ApplicationForm = () => {
                   <p className="text-sm text-muted-foreground">Телефон</p>
                   <p className="font-semibold text-foreground">+7 (778) 439-91-62</p>
                 </div>
-              </div>
+              </a>
               <a href="https://instagram.com/lingvocamp" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 bg-card/95 backdrop-blur-sm rounded-xl p-4 shadow-soft hover:shadow-medium transition-shadow">
                 <div className="w-10 h-10 rounded-lg bg-primary-light flex items-center justify-center">
                   <Instagram className="w-5 h-5 text-primary" />
