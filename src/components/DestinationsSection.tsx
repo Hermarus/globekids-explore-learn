@@ -128,14 +128,6 @@ const DestinationsSection = () => {
                 {/* Info grid */}
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="flex items-center gap-2 text-sm">
-                    <Calendar className="w-4 h-4 text-trust" />
-                    <span className="text-muted-foreground">{dest.duration}</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm">
-                    <Users className="w-4 h-4 text-trust" />
-                    <span className="text-muted-foreground">{dest.groupSize}</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm">
                     <Thermometer className="w-4 h-4 text-trust" />
                     <span className="text-muted-foreground">{dest.weather}</span>
                   </div>
