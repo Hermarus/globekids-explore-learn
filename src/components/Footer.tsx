@@ -1,4 +1,5 @@
-import { Globe, Phone, MapPin, Instagram, MessageCircle } from "lucide-react";
+import { Phone, MapPin, Instagram, MessageCircle } from "lucide-react";
+import logo from "@/assets/logo.png";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -9,7 +10,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <Globe className="w-6 h-6 text-primary" />
+              <img src={logo} alt="Lingvo Camp" className="h-10 w-auto" />
               <span className="font-bold text-xl tracking-tight">
                 Lingvo Camp
               </span>

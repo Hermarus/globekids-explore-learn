@@ -1,5 +1,6 @@
-import { Globe, Menu, X, MessageCircle } from "lucide-react";
+import { Menu, X, MessageCircle } from "lucide-react";
 import { useState } from "react";
+import logo from "@/assets/logo.png";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -23,7 +24,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <Globe className="w-6 h-6 text-trust" />
+            <img src={logo} alt="Lingvo Camp" className="h-10 w-auto" />
             <span className="text-xl font-bold text-foreground tracking-tight">
               Lingvo Camp
             </span>
