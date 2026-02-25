@@ -1,25 +1,29 @@
-# Project Name
+# GlobeKids Explore & Learn
 
-Frontend application built with modern React stack.
+Web application designed to provide an intuitive learning experience for kids.
 
-## Project overview
+## Overview
 
-This project is a web application built using React and TypeScript.  
-The focus is on clean UI, reusable components, and fast development workflow.
+This is a modern frontend application built with a great toolchain for fast and clean development.  
+It is structured for maintainability and ease of updates.
 
-## Tech stack
+## Tech Stack
 
+This project uses:
+
+- Vite
 - React
 - TypeScript
-- Vite
 - Tailwind CSS
 - shadcn/ui
 
-## Getting started
+## Local Setup
 
-### Prerequisites
+### Requirements
 
-- Node.js (recommended LTS version)
+Make sure you have:
+
+- Node.js (v16+ recommended)
 - npm
 
 ### Installation
@@ -27,5 +31,5 @@ The focus is on clean UI, reusable components, and fast development workflow.
 Clone the repository:
 
 `bash
-git clone <REPOSITORY_URL>
-cd <PROJECT_NAME>
+git clone https://github.com/Hermarus/globekids-explore-learn.git
+cd globekids-explore-learn
